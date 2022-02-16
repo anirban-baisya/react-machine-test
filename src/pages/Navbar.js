@@ -4,8 +4,9 @@ import { Link , useHistory} from "react-router-dom";
 
 export default function Navbar() {
 
-  const {user} = JSON.parse(localStorage.getItem('currentUser')) //this is to display loged in user name
-
+ // const {user} = JSON.parse(localStorage.getItem('currentUser')) //this is to display loged in user name
+// console.warn(user.email);
+  
   const history = useHistory(); //this is to give logout functionality
   const logout=()=>{ //when logout button is clicked this func. will triged
       localStorage.clear()
@@ -193,16 +194,6 @@ export default function Navbar() {
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
                   
-                  {/* <!--<li className="nav-item dropdown ">
-                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Fruits
-                    </a>
-                    <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a className="dropdown-item" href="fruits.html">Foodgrains</a>
-                      <a className="dropdown-item" href="vagetables.html"> Oil</a>
-                      <a className="dropdown-item" href="leaves.html">Masala</a>
-                    </ul>
-                  </li>--> */}
                   
                   <li className="nav-item">
                     <a className="nav-link" href="#">About Bazar Maynaguri</a>
@@ -231,7 +222,8 @@ export default function Navbar() {
               <div className="buttons  mybtn  ">
                           <Link  className="btn btn-outline-dark lbutton ms-2 mr-4 ml-5 text-white">
                             <i className='fa fa-sign-in me-1'> </i>
-                             {user.email.substring(0 , user.email.length-10)}{/*after login intial text chnange as loged in user name  */}
+                             {/* {user.email.substring(0 , user.email.length-10)} */} {/*after login intial text chnange as loged in user name  */}
+                                  {/* {user.email} */}
                           </Link>
                           <Link to='/register' className="btn btn-outline-dark lbutton ms-2 ml-3 text-white">
                             <i className='fa fa-user-plus me-1'> </i>

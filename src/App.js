@@ -1,6 +1,6 @@
 import './App.css';
 // import Vegtablsearch from './pages/Vegtablsearch';
-// import About from './pages/About';
+// import RegisterPage from './pages/RegisterPage';
 // import Home from './pages/Home';
 import Routerpage from './Routerpage';
 
@@ -10,6 +10,7 @@ function App() {
      {/* <Home/> */}
      {/* <Vegtablsearch/> */}
      <Routerpage/>
+     {/* <RegisterPage/> */}
     </div>
   );
 }
